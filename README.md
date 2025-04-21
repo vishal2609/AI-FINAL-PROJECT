@@ -1,4 +1,4 @@
-# 🤟 ASL Alphabet Recognition using CNN and Streamlit
+# ASL Alphabet Recognition using CNN and Streamlit
 
 A real-time American Sign Language (ASL) alphabet recognition app built with a Convolutional Neural Network (CNN), trained on the Sign Language MNIST dataset, and deployed using a webcam interface with Streamlit.
 
@@ -11,7 +11,6 @@ A real-time American Sign Language (ASL) alphabet recognition app built with a C
 - Deep CNN model with data augmentation for better accuracy
 - Streamlit web app interface
 - Supports exportable `.keras` model format
-- Clean project structure for easy extension
 
 ---
 
@@ -19,7 +18,6 @@ A real-time American Sign Language (ASL) alphabet recognition app built with a C
 
 - Python
 - TensorFlow / Keras
-- OpenCV
 - Streamlit
 - NumPy / Pandas
 
@@ -31,12 +29,13 @@ A real-time American Sign Language (ASL) alphabet recognition app built with a C
 asl-alphabet-detector/
 ├── app/
 │   └── asl_app.py              # Streamlit webcam app
-├── data/                       # ASL MNIST dataset (ignored in .gitignore)
+├── data/                       # ASL MNIST dataset
 ├── models/
 │   └── asl_cnn_model.keras     # Trained model
 ├── scripts/
 │   ├── train_model.py          # CNN model training script
-│   └── label_map.py            # Label mapping (skips J)
+│   └── label_map.py            # Label mapping
+│   └── CS670_AI_Project_EDA_ML_Model.ipynb   # Model comparative study(does not have any role in application)
 ├── requirements.txt            # Pip dependencies
 ├── .gitignore
 └── README.md
@@ -133,6 +132,3 @@ scikit-learn
 
 ---
 
-## 📜 License
-
-MIT License. Feel free to use, modify, and build on top of this project!
