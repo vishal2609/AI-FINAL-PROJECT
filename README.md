@@ -131,7 +131,7 @@ scikit-learn
 
 ## 📸 Demo
   - This demo link is just to check how app will look like but it wont run as cloud app will not have access to access the webcam
-![demo](https://asl-app-cs670.streamlit.app/)
+![demo] ([https://asl-app-cs670.streamlit.app/](https://asl-app-cs670.streamlit.app/))
 
 ---
 
