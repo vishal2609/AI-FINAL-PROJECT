@@ -9,7 +9,6 @@ venv/
 .env/
 
 # Streamlit cache
-.streamlit/
 
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints/
