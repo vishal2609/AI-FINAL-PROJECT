@@ -103,11 +103,11 @@ asl-alphabet-detector/
    ```
 
 4. **Train the model-(Optional)**  
-  - Best model is already trained and is part of repo, but if needed you can run the script to retrain model
-  - But this is optional step as model is placed in models section already.
-   ```bash
-   python scripts/train_model.py
-   ```
+    - Best model is already trained and is part of repo, but if needed you can run the script to retrain model
+    - But this is optional step as model is placed in models section already.
+    ```bash
+    python scripts/train_model.py
+    ```
 
 6. **Run the app**  
    ```bash
