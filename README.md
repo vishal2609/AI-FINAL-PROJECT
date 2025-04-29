@@ -98,7 +98,7 @@ asl-alphabet-detector/
    pip install -r requirements.txt
    ```
 
-4. **(Optional) Download dataset**  
+4. **Make Download dataset**  
    Place `sign_mnist_train.csv` and `sign_mnist_test.csv` inside the `data/` directory.
 
 5. **Train the model**  
