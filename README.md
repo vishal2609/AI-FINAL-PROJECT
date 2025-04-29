@@ -31,7 +31,8 @@ asl-alphabet-detector/
 │   └── asl_app.py              # Streamlit webcam app
 ├── data/                       # ASL MNIST dataset
 ├── models/
-│   └── asl_cnn_model.keras     # Trained model
+│   └── sign_mnist_cnn_best.keras    # Best-performing model during training (lowest validation loss)
+│   └── sign_mnist_cnn_final.keras   #	Model saved after last training epoch
 ├── scripts/
 │   ├── train_model.py          # CNN model training script
 │   └── label_map.py            # Label mapping
@@ -46,15 +47,18 @@ asl-alphabet-detector/
 ## 🗂️ File Descriptions
 
 - **`app/asl_app.py`**  
-  - Streamlit application script.  
-  - Captures webcam feed, processes frames, loads the trained CNN model, makes real-time predictions, and displays the predicted ASL alphabet with the confidence score.
+  - Captures live webcam feed and defines a customizable Region of Interest (ROI) for hand sign detection.
+  - Preprocesses frames (grayscale conversion, resizing to 28×28, normalization) to match the CNN model input.
+  - Loads the trained ASL recognition model (sign_mnist_cnn_best.keras) using Streamlit caching for fast real-time inference.
+  - Displays predictions with confidence scores, FPS, and provides smoothing over recent frames to stabilize output.
+  - Includes interactive sidebar controls (confidence threshold, ROI size, grayscale preview) and handles webcam errors gracefully.
+
 
 - **`data/`**  
   - Folder to store training (`sign_mnist_train.csv`) and testing (`sign_mnist_test.csv`) datasets.  
-  - This folder is ignored in GitHub uploads through `.gitignore` for cleanliness.
 
-- **`models/asl_cnn_model.keras`**  
-  - The saved CNN model file after training.  
+- **`models/sign_mnist_cnn_best.keras`**  
+  - The saved Best-performing CNN model during training (lowest validation loss).  
   - Used by the Streamlit app to predict ASL letters without retraining.
 
 - **`scripts/train_model.py`**  
@@ -98,10 +102,9 @@ asl-alphabet-detector/
    pip install -r requirements.txt
    ```
 
-4. **Make Download dataset**  
-   Place `sign_mnist_train.csv` and `sign_mnist_test.csv` inside the `data/` directory.
-
-5. **Train the model**  
+4. **Train the model-(Optional)**  
+  - Best model is already trained and is part of repo, but if needed you can run the script to retrain model
+  - But this is optional step as model is placed in models section already.
    ```bash
    python scripts/train_model.py
    ```
