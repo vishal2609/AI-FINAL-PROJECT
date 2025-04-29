@@ -85,8 +85,8 @@ asl-alphabet-detector/
 
 1. **Clone the repo**  
    ```bash
-   git clone https://github.com/your-username/asl-alphabet-detector.git
-   cd asl-alphabet-detector
+   git clone https://github.com/vishal2609/AI-FINAL-PROJECT.git
+   cd AI-FINAL-PROJECT
    ```
 
 2. **Create virtual environment**  
