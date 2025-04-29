@@ -131,7 +131,7 @@ scikit-learn
 
 ## 📸 Demo
 
-![demo](https://user-images.githubusercontent.com/your-screenshot-url.png)
+![demo](https://asl-app-cs670.streamlit.app/)
 
 ---
 
